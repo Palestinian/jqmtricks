@@ -9,7 +9,7 @@ $(document).on("pagecreate", function () {
             textonly: false
         });
         /* load panel then open it */
-        $.get("http://fiddle.jshell.net/Palestinian/GYNLy/show/", function (data) {
+        $.get("external-panel.html", function (data) {
             $.mobile.pageContainer.append(data);
             $("[data-role=panel]").panel().enhanceWithin();
         }, "html").done(function () {
