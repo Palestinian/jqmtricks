@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Load Events</title>
+    <link rel="stylesheet" href="../../assets/jquery.mobile-1.4.4.min.css" />
+    <script src="../../../assets/jquery-1.11.1.min.js"></script>
+    <script src="../../../assets/jquery.mobile-1.4.4.min.js"></script>
+    <script src="code.js"></script>
+</head>
+
+<body>
+    <div data-role="page" id="demo">
+        <!-- HEADER -->
+        <div data-role="header" class="header" data-position="fixed">
+            <h1>Header</h1>
+
+        </div>
+        <div data-role="content" class="ui-content"> <a href="http://jsfiddle.net/Palestinian/epg47/show" class="ui-btn ui-btn-icon-right ui-icon-check">Link</a>
+            <a href="#" class="ui-btn ui-btn-icon-right ui-icon-check" id="foo">Change page</a>
+            <a href="#" class="ui-btn ui-btn-icon-right ui-icon-check" id="bar">Load page</a>
+            <a href="http://jsfiddle.net/Palestinian/epg4712/show" class="ui-btn ui-btn-b ui-btn-icon-right ui-icon-delete">Broken link</a>
+
+        </div>
+        <div data-role="footer" class="footer" id="footer" data-position="fixed">
+            <h1>Footer</h1>
+
+        </div>
+        <!-- popup -->
+        <div data-role="popup" id="loaded" data-history="false">
+            <div class="ui-content" style="text-align: center;">
+                <p>Page has been loaded successfully, would like to move to it?</p> <a href="#" class="ui-btn ui-btn-a ui-btn-icon-left ui-icon-info ui-btn-inline moveTo">Yes</a>
+                <a href="#" data-rel="back" class="ui-btn ui-btn-b ui-btn-icon-left ui-icon-delete ui-btn-inline">No</a>
+
+            </div>
+        </div>
+        <!-- /popup -->
+    </div>
+    <div data-role="page" id="p2">
+        <div data-role="header" data-add-back-btn="true">
+            <h1>Static page</h1>
+
+        </div>
+    </div>
+</body>
+</html>
