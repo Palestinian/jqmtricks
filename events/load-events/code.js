@@ -4,14 +4,14 @@ $(document).on("pagebeforechange pagecontainerbeforetransition pagebeforecreate 
 }).on('pagecreate', "#demo", function() {
     /* change page btn */
     $("#foo").on("click", function(e) {
-        $.mobile.pageContainer.pagecontainer("change", "http://jsfiddle.net/Palestinian/epg47/show", {
+        $.mobile.pageContainer.pagecontainer("change", "external-page.html", {
             transition: "flip"
         });
     });
     /* load page btn */
     $("#bar").on("click", function(e) {
         $.mobile.loading("show");
-        $.mobile.pageContainer.pagecontainer("load", "http://jsfiddle.net/Palestinian/epg47/show");
+        $.mobile.pageContainer.pagecontainer("load", "external-page.html");
     });
 }).on("pagecontainerbeforeload pagecontainerload", function(e, ui) {
     /* timestamp & ui object */
@@ -49,7 +49,7 @@ $(document).on("pagebeforechange pagecontainerbeforetransition pagebeforecreate 
     /* close popup and move to loaded page */
     $("#loaded").popup("close");
     setTimeout(function(e) {
-        $.mobile.pageContainer.pagecontainer("change", "http://jsfiddle.net/Palestinian/epg47/show", {
+        $.mobile.pageContainer.pagecontainer("change", "external-page.html", {
             transition: "flip"
         });
     }, 250);
